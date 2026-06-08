@@ -128,15 +128,15 @@ def build_test(path):
     d.rule()
 
     d.h2("Part 1 - Completar: Verbos (present tense)")
-    d.instr("Fill each blank with the correct present-tense form of the verb in parentheses. Watch the stem changes.")
+    d.instr("Fill each blank with the correct present-tense form of the verb in parentheses.")
     d.q(1, "Mi profesor siempre ______ (decir) que debemos estudiar.")
     d.q(2, "Cuando no entiendo la tarea, yo ______ (pedir) ayuda.")
     d.q(3, "Si nosotros ______ (seguir) las instrucciones, todo sale bien.")
     d.q(4, "La maestra ______ (repetir) las palabras para que aprendamos.")
     d.q(5, "Mis amigos ______ (conseguir) buenas notas porque estudian.")
 
-    d.h2("Part 2 - El presente progresivo (estar + -ando/-iendo)")
-    d.instr("Fill in the present progressive. Helping verb = ESTAR, never ser. (Type both words, e.g. 'estoy estudiando'.)")
+    d.h2("Part 2 - El presente progresivo")
+    d.instr("Fill in each blank with the present progressive form of the verb in parentheses. (Type both words.)")
     d.q(6, "Yo ______ (estudiar) para el examen.", boxw=2.9*inch)
     d.q(7, "Mi hermano ______ (comer) en la cocina.", boxw=2.9*inch)
     d.q(8, "Nosotros ______ (ver) una película.", boxw=2.9*inch)
@@ -168,8 +168,8 @@ def build_test(path):
     for n in range(22, 32):
         d.q_inline(n, "", boxw=1.5*inch, h=18)
 
-    d.h2("Part 5 - Verbos con cambio de raíz (stem-changers)")
-    d.instr("Write the correct present-tense form. Remember: the stem changes in every form EXCEPT nosotros.")
+    d.h2("Part 5 - Verbos (conjugar)")
+    d.instr("Write the correct present-tense form for the subject shown.")
     d.q_inline(32, "dormir  ->  nosotros:")
     d.q_inline(33, "dormir  ->  ellos:")
     d.q_inline(34, "poder  ->  yo:")
@@ -182,8 +182,7 @@ def build_test(path):
     d.q_inline(41, "almorzar  ->  ellos:")
 
     d.h2("Part 6 - Situaciones (write your own sentences)")
-    d.instr("Write a complete Spanish sentence using each verb. Use a different subject each time. "
-            "Watch agreement, stem changes, and double verbs (conjugate the 1st verb, keep the 2nd as an infinitive).")
+    d.instr("Write a complete Spanish sentence using each verb. Use a different subject each time.")
     for n, v in [(42,"almorzar"),(43,"dormir"),(44,"poder + another verb"),
                  (45,"querer"),(46,"preferir"),(47,"volver"),(48,"jugar"),(49,"pensar")]:
         d.q(n, f"({v})", boxw=WIDTH-12, h=20)
